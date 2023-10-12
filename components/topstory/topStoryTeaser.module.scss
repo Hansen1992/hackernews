@@ -1,0 +1,142 @@
+.storyWrapper {
+	width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+	.storyWrapper {
+		width: 70%;
+	}
+}
+
+.header {
+	font-size: 50px;
+	font-weight: 600;
+	margin-bottom: 16px;
+}
+
+.imageWrapper {
+	width: 100%;
+	height: 400px;
+	position: relative;
+	margin: 16px 0;
+	overflow: hidden;
+	border-radius: 16px;
+	transition: filter 0.4s;
+
+	&:hover {
+		filter: brightness(1.2);
+	}
+}
+
+.title {
+	margin-bottom: 16px;
+	font-size: 1.4rem;
+}
+
+.avatarImageWrapper {
+	border-radius: 50%;
+	border: 1px solid transparent;
+	margin-right: 16px;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	overflow: hidden;
+}
+
+.image {
+	object-fit: cover;
+}
+
+.description {
+	margin-bottom: 16px;
+	font-size: 1.2rem;
+	color: var(--color-grey);
+	white-space: nowrap;
+	overflow: hidden;
+	width: 100%;
+	text-overflow: ellipsis;
+
+	@supports (-webkit-line-clamp: 3) {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: inherit;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+	}
+}
+
+.contributorWrapper {
+	display: flex;
+}
+
+.contributorInfoWrapper {
+	display: flex;
+	flex-flow: column nowrap;
+	font-size: 0.9rem;
+	justify-content: space-around;
+}
+
+.contributorInfo {
+	display: flex;
+}
+
+.tag {
+	border-radius: 10px;
+	background-color: var(--color-sunset);
+	color: var(--color-white);
+	font-weight: 500;
+	font-size: 0.7rem;
+	padding: 4px 6px;
+	display: flex;
+	align-self: center;
+}
+
+.publishDate {
+	padding: 4px 6px 4px 0;
+}
+
+.reactionWrapper {
+	display: flex;
+	margin-bottom: 16px;
+	align-items: center;
+}
+
+.reaction {
+	margin-left: 16px;
+}
+
+.emoji {
+	background-color: var(--color-light-grey);
+	border: 2px solid var(--color-white);
+	border-radius: 50%;
+}
+
+.emojiWrapper {
+	display: flex;
+	list-style-type: none;
+	z-index: 1;
+	padding-top: 5px;
+}
+
+.emojiListItem {
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	width: 18px;
+	transition: transform 0.4s;
+
+	&:hover {
+		transform: translateY(-4px);
+	}
+}
+
+.emojiListItem:nth-child(1) {
+	z-index: 1;
+}
+.emojiListItem:nth-child(2) {
+	z-index: 2;
+}
+.emojiListItem:nth-child(3) {
+	z-index: 3;
+}
